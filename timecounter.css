@@ -1,0 +1,61 @@
+#timer {
+            font-size: 48px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+}
+#scrollingText {
+            position: absolute;
+            left: 20px; /* 距离左侧的距离 */
+            top: 50%; /* 从中间开始滚动 */
+            transform: translateY(-50%); /* 垂直居中 */
+            height: 500px; /* 设置滚动区域高度 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            width: 200px; /* 设置滚动区域宽度 */
+            color: white;
+}
+.scroll {
+            display: inline-block;
+            animation: scroll 10s linear infinite; /* 滚动动画 */
+}
+@keyframes scroll {
+            0% {
+                transform: translateY(100%); /* 从下方开始 */
+            }
+            100% {
+                transform: translateY(-100%); /* 滚动到上方 */
+            }
+}
+#message {
+            font-size: 62px;
+            color: white;
+            margin-bottom: 20px; /* 与计时器间隔 */
+            position: absolute;
+            top: 40%; /* 距离顶部40% */
+            transform: translateY(-50%); /* 垂直居中 */
+        }
+#link1{
+      font-family: 隶书;
+      font-size: 30px;
+      position: absolute;
+      margin-top: 15px;
+      bottom: 40%;
+      transform: translateY(-50%);
+      text-decoration: 0;
+      color:pink;
+}
+body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('背景图片.png'); /* 替换为你的背景图片链接 */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.8; /* 设置透明度，这里设置为50% */
+      z-index: -1; /* 将伪元素放在内容后面 */
+}
